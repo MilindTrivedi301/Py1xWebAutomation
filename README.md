@@ -18,6 +18,6 @@ pip install selenium pytest pytest-html allure-pytest
 3. git push
 4. git pull ( if You have added somehting on Github.com)
 
-## To run your Testcase Parallelly
+## To run your Testcase Parallellyy
 
 pip install pytest-xdist pytest -n auto code/8_JAN_2024/test_Lab14.py -s -v
