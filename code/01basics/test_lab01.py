@@ -25,8 +25,11 @@ def test_open_login():
     driver.get("https://google.com")
     driver.maximize_window()
     LOGGER.info(driver.title)
+    print(driver.title)
     print("This is Milind")
 
 
     # 1 Session ID -> close ID will be deleted
     # Multiple windows in same session.
+
+    # Self is require in case of class
