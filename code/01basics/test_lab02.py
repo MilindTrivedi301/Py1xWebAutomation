@@ -11,7 +11,7 @@ def test_open_login():
     # Give some extra argument or extension or anything to Chrome.
     # Chrome Options  - Chrome with the Extension, Window Size, Proxy, JS disabled
 
-    extension_path = "/Users/pramod/Downloads/adblocker1x.crx"
+    extension_path = "/Home/Downloads/adblocker1x.crx"
     chrome_options.add_extension(extension_path)
 
     chrome_options.add_argument("--start-maximized")
