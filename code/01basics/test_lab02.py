@@ -14,7 +14,7 @@ def test_open_login():
     extension_path = "/Home/Downloads/adblocker1x.crx"
     chrome_options.add_extension(extension_path)
 
-    chrome_options.add_argument("--start-maximized")
+    chrome_options.add_argument("--start-maximized") #chorme will be opend with maximized
 
     driver = webdriver.Chrome(options=chrome_options) # Fresh chrome which doesn't have anything
     driver.get("https://google.com")

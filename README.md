@@ -38,3 +38,12 @@ driveer.get("https://google.com") print(driver.title) ##request3
 https://www.w3.org/TR/webdriver2/#new-session
 
 # code -> (Selenium 4 server) API request -> Brwoser Drivers -> Browsers
+
+
+## Python Logging
+
+1. Import the logging module
+2. create pytest.ini
+3. call     LOGGER = logging.getLogger(__name__)
+4. In the code - LOGGER.info(driver.title)
+5. pytest test_vwo.py -s -v
