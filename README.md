@@ -37,7 +37,7 @@ driveer.get("https://google.com") print(driver.title) ##request3
 -> Here for all the request there is a POST request to selenium 4 server which creates a new session(Fresh browser)
 https://www.w3.org/TR/webdriver2/#new-session
 
-# code -> (Selenium 4 server) API request -> Brwoser Drivers -> Browsers
+## code -> (Selenium 4 server) API request -> Brwoser Drivers -> Browsers
 
 ## Python Logging
 1. Import the logging module
