@@ -39,9 +39,7 @@ https://www.w3.org/TR/webdriver2/#new-session
 
 # code -> (Selenium 4 server) API request -> Brwoser Drivers -> Browsers
 
-
 ## Python Logging
-
 1. Import the logging module
 2. create pytest.ini
 3. call     LOGGER = logging.getLogger(__name__)
