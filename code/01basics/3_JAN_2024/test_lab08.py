@@ -24,13 +24,13 @@ def test_open_login():
     # # App, ment
 
     # Link -> Full Exact Match
-    # Partial -> Contains
+    # Partial -> Contains (we don't use partial as when multiple text having same name will create a conflict)
 
     # mp_btn = driver.find_element(By.LINK_TEXT,"Appointment")
     # mp_btn.click()
 
     # mp_btn = driver.find_elements(By.CLASS_NAME, "btn.btn-dark.btn-lg")
-    # mp_btn[1].click()
+    # mp_btn[3].click()
 
     mp_btn = driver.find_elements(By.TAG_NAME, "a")
     mp_btn[5].click()

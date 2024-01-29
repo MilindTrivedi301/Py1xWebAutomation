@@ -35,18 +35,16 @@ def test_open_login():
 
 
     # Custom attribute it is not id, name, class -> Custom Attribute -
-    # student = "praveen" , roll=123, phone="233", placeholder="dasda"
-    #data-qa="dasda" , testID="123"
+    # student = "milind" , roll=123, phone="233", placeholder="dasda"
+    #data-qa="dasda" , testID="123" Only can be used with the help of CSS_SELECTOR
 
     # <input
     # type="password"
     # class="form-control"
     # placeholder="Password"
-    # student="praveen"
+    # student="milind"
     # value=""
     # autocomplete="off">
-
-
 
 
 
