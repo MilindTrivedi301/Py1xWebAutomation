@@ -28,7 +28,7 @@ def test_open_login():
 
     # Make Appointment Button
 
-    # //a[@id='btn-make-appointment'] - Relative Direct
+    # //a[@id='btn-make-appointment'] - Relative Direct (this will be a fastest xpath)
 
     # //*[@id='btn-make-appointment'] - This is called * wild card ,
     # Find id = btn-make-app in All the TagNames, this will be a Slow xpath
@@ -46,7 +46,7 @@ def test_open_login():
 
     list_elements_p = driver.find_elements(By.XPATH, "//p[contains(text(),'A')]")
     for i in list_elements_p:
-        if i.text == "Copyright © CURA Healthcare Service 2024":
+        if i.text == "Copy CURA Healthcare Service 2024":
             i.click()
         print(i.text)
 

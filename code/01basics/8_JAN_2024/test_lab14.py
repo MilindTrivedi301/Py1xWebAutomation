@@ -26,9 +26,9 @@ def test_open_login():
 
     # I am also and start in plateform?
 
-def test_open_login_Edge():
-    driver = webdriver.Edge()
-    #driver = webdriver.Chrome()
+def test_open_login_Firefox():
+    driver = webdriver.Firefox()
+    #driver = webdriver.Firefox()
     driver.get("https://katalon-demo-cura.herokuapp.com/")
 
     assert driver.title == "CURA Healthcare Service"

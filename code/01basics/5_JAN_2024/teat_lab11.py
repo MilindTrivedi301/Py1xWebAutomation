@@ -12,7 +12,8 @@ def test_open_login():
     driver = webdriver.Chrome()
     driver.get("https://www.idrive360.com/enterprise/login")
     # Relative Xpath
-    rel_xpath_email = driver.find_element(By.XPATH, "//a[@id='btn-make-appointment']")
+   # rel_xpath_email = driver.find_element(By.XPATH, "//a[@id='btn-make-appointment']"
+    rel_xpath_email = driver.find_element(By.XPATH, "//input[@type='email']")
     rel_xpath_email.send_keys("augtest_040823@idrive.com")
 
     time.sleep(5)
