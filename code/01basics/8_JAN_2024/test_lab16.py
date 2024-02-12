@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 # CSS Selectors
 # Alerts
 
+
 def test_open_login():
     driver = webdriver.Chrome()
     driver.get("https://app.vwo.com")
@@ -22,11 +23,12 @@ def test_open_login():
 
     submit_input.click()
 
-
-
-
-
-
-
     time.sleep(5)
     driver.quit()
+
+
+
+
+
+
+
