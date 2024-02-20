@@ -1,7 +1,13 @@
 import time
-
+import pytest
+import os
+import logging
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException
 
 def test_open_login():
     driver = webdriver.Chrome()
@@ -21,5 +27,22 @@ def test_open_login():
         print(i.text)
 
 
-    time.sleep(5)
+driver = webdriver.Chrome()
+LOGGER = logging.info(__name__)
+
+def waitForElements(waitInSeconds):
+    wait = WebDriverWait(driver, waitInSeconds)
+    return wait
+
+def test_deviceNameListTest():
+
+    driver.get("https://www.amazon.in/s?k=mobile+under+10000+128gb+storage&i=electronics&rh=n%3A1389432031%2Cp_89%3Arealme%2Cp_36%3A-500000&dc&crid=17THE8HJH9KC6&qid=1708421853&rnid=1318502031&sprefix=mobile+under+10000+1%2Caps%2C221&ref=sr_nr_p_36_1")
+
+    waitForElements(15).until(EC.presence_of_element_located((By.CLASS_NAME, "a-size-medium")))
+    devicesList = driver.find_elements(By.XPATH, "//div[@class='a-size-medium']")
+
+    for device in devicesList:
+        print(device.text)
+
+    time.sleep(15)
     driver.quit()

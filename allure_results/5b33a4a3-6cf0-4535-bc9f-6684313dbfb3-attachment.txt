@@ -1,0 +1,1 @@
+[32mINFO    [0m test_lab01:test_lab01.py:27 Google
