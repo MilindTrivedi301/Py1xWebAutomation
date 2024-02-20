@@ -34,10 +34,13 @@ def test_vwologin_positve():
         print(username,password)
         vwo_login(username,password)
 
-
-
-
-
+"""
+@pytest.mark.parametrize("user_cred", read_credentials_from_excel("/home/milind/Downloads/testdata_ddt.xlsx"))
+def test_post_create_token(user_cred):
+    username = user_cred["username"]
+    password = user_cred["password"]
+    vwo_login(username, password)
+"""
 
 def vwo_login(username,password):
     driver = webdriver.Chrome()

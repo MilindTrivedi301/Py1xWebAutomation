@@ -1,5 +1,4 @@
 import os
-
 import openpyxl
 import pytest
 from selenium import webdriver
@@ -17,7 +16,8 @@ def read_credentials_from_excel(file_path):
     return credentials
 
 
-@pytest.mark.parametrize("user_cred", read_credentials_from_excel(os.getcwd() + "/testdata_ddt.xlsx"))
+# @pytest.mark.parametrize("user_cred", read_credentials_from_excel(os.getcwd() + "/testdata_ddt.xlsx"))
+@pytest.mark.parametrize("user_cred", read_credentials_from_excel("/home/milind/PycharmProjects/Py1xWebAutomation/Py1xWebAutomation/code/01basics/12_JAN_2024/testdata_ddt.xlsx"))
 def test_vwologin_positve(user_cred):
     username = user_cred["username"]
     password = user_cred["password"]
@@ -39,7 +39,7 @@ def vwo_login(username, password):
     result = driver.current_url
     if result != "https://app.vwo.com/#dashboard":
         pytest.xfail("Invalid Login")
-        driver.quit()
+    driver.quit()
     else:
         assert True == True
         driver.quit()
