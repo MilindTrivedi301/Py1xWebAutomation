@@ -11,6 +11,7 @@ from selenium.common.exceptions import ElementNotVisibleException, ElementNotSel
 
 def test_open_login():
     driver = webdriver.Chrome()
+    driver.maximize_window()
     driver.get("https://www.amazon.in/")
 
     assert driver.current_url == "https://www.amazon.in/"
@@ -31,7 +32,8 @@ driver = webdriver.Chrome()
 LOGGER = logging.info(__name__)
 
 def waitForElements(waitInSeconds):
-    wait = WebDriverWait(driver, waitInSeconds)
+    ignore_list = [ElementNotVisibleException, ElementNotSelectableException]
+    wait = WebDriverWait(driver, timeout=30, poll_frequency=5, ignored_exceptions=ignore_list)
     return wait
 
 def test_deviceNameListTest():
