@@ -46,8 +46,6 @@ def test_open_login():
     # value=""
     # autocomplete="off">
 
-
-
     time.sleep(5)
     # driver.close()
     driver.quit()
